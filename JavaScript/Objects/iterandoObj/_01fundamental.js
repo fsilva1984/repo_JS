@@ -40,7 +40,7 @@ const iterableObj = [
 //montando uma template HTML
 root.innerHTML = `
 <!--MENSAGEM-->
-<p class="display-1">Hello User !</p>
+<p class="display-5"><strong>To view info user, press enter</strong></p>
 
 <!--div container-->
 <div>
@@ -56,16 +56,20 @@ const exit = document.querySelector('.exit-code')
 
 //str vazia que vai receber os itens da iteracao
 let tmpHTML = ''
+addEventListener('keypress', (evt)=>{
+  if(evt.key == 'Enter'){
 
-//iterando o array das propriedades do obj
-iterableObj.forEach( values => {
-  tmpHTML += `<li>${values}</li>`
-  
+  //iterando o array das propriedades do obj
+  iterableObj.forEach( values => {
+    tmpHTML += `<li>${values}</li>`
+
+  })
+
+  //saida do codigo
+  exit.innerHTML = tmpHTML
+
+  }
 })
-
-//saida do codigo
-exit.innerHTML = tmpHTML
-
 
 
 
