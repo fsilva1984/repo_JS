@@ -1,0 +1,32 @@
+
+
+body{
+  display: flex;
+ justify-content: center;
+}
+#container-form{
+  width: 40vw;
+  border: 1px solid rgba(179, 182, 182, 0.733);
+  border-radius: 8px;
+  background-color: rgb(57, 64, 68);
+}
+
+
+@media(max-width: 760px){
+  #container-form{
+    width: 80vw;
+  }
+}
+
+
+.label{
+  color: whitesmoke;
+}
+
+
+
+
+
+
+
+
